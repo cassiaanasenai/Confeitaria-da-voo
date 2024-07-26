@@ -7,16 +7,18 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    color: #333;
 }
 
 .container {
     width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
 header {
-    background-color: #f8b400;
+    background-color: #a83432;
     color: #fff;
     padding: 20px 0;
 }
@@ -66,6 +68,12 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #ff4f41;
 }
 
 .about,
@@ -96,7 +104,95 @@ nav ul li a {
 
 footer {
     background-color: #333;
-    color: #fff;
+    color: #E7BF74;
     text-align: center;
     padding: 10px 0;
+}
+
+/* Estilos da página de contato */
+.contatos {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.contatos form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contatos .form-group {
+    text-align: left;
+}
+
+.contatos label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contatos input, .contatos textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contatos textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contatos button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.contatos button:hover {
+    background-color: #ff4f41;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menu-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 10px;
+        font-size: 1em;
+    }
 }
